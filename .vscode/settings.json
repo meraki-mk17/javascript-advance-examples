@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.port": 5501,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.inlineSuggest.edits.allowCodeShifting": "never",
+    "editor.inlineSuggest.edits.renderSideBySide": "never",
+    "editor.inlineSuggest.enabled": false
+}
