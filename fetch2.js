@@ -1,9 +1,11 @@
 // fetch("https://jsonplaceholder.typicode.com/users")
 //     .then(response => response.json())
 //     .then(users => {
-//         for(let user of users){
+//         const listOfUsers = users.filter(person => person.id<=5);
+//         for(let user of listOfUsers){
 //             console.log("Name: ",user.name);
-//             console.log("Email: ",user.age);
+//             console.log("Email: ",user.email);
+//             console.log("Company Details: ",user.company);
 //         }
 //     })
 //     .catch(error => {
@@ -62,21 +64,130 @@
 //   .then(n => console.log(n));
 
 
-async function getData(){
-    const url = "https://jsonplaceholder.typicode.com/users";
-    try{
-        const response = await fetch(url);
-        if(!response.ok){
-            throw new Error(`HTTP status error ${response.ok}`)
-        }
-        const data = await response.json();
-        const person = data.find(users => users.id === 1);
-        console.log(person.name);
+// async function getData(){
+//     const url = "https://jsonplaceholder.typicode.com/users";
+//     try{
+//         const response = await fetch(url);
+//         if(!response.ok){
+//             throw new Error(`HTTP status error ${response.ok}`)
+//         }
+//         const data = await response.json();
+//         const person = data.find(users => users.id === 1);
+//         console.log(person.name);
 
 
-    }catch(error){
-        console.log("Error catched",error);
-    }
+//     }catch(error){
+//         console.log("Error catched",error);
+//     }
 
-}
-getData();
+// }
+// getData();
+
+// const res = await fetch("https://jsonplaceholder.typicode.com/users");
+// const users = await res.json();
+
+// // Keep only users whose ID is greater than 5
+// const filteredUsers = users.filter(user => user.id > 5);
+// console.log("Filtered count:", filteredUsers.length);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
