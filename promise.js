@@ -103,19 +103,50 @@
 //     })
 
 
-const addTwoPromises = async function(promise1, promise2) {
-    return (await promise1) / (await promise2)
-};
+// const addTwoPromises = async function(promise1, promise2) {
+//     return (await promise1) / (await promise2)
+// };
 
-addTwoPromises(2,2)
-    .then(result => console.log(result));
-
-
+// addTwoPromises(2,2)
+//     .then(result => console.log(result));
 
 
+function redLight(){
+    return new Promise((resolve)=>{
+        console.log("Red");
+        setTimeout(()=>{
+            resolve();
+        },3000);
+    });
+}
 
+function yellowLight(){
+    return new Promise((resolve)=>{
+        console.log("Yellow");
+        setTimeout(()=>{
+            resolve();
+        },1000);
+    });
+}
 
+function greenLight(){
+    return new Promise((resolve)=>{
+        console.log("Green");
+        setTimeout(()=>{
+            resolve();
+        });
+    });
+}
 
+async function trafficLights(){
+    await redLight();
+    await yellowLight();
+    await greenLight();
+
+    await redLight();
+}
+
+trafficLights();
 
 
 

@@ -91,19 +91,98 @@
 // console.log("Filtered count:", filteredUsers.length);
 
 
+// fetch("https://jsonplaceholder.typicode.com/users/1")
+//    .then(response =>{
+      
+//     if(!response.ok){
+//         throw new Error("Failed to fetch user error")
+//     }
+//     const data = response.json()
+//    })
+//    .then(users =>{
+//      console.log(users.name);
+//      console.log(users.email);
+//      console.log(users.company.name);
+//      return users
+//    })
+
+// async function getInfo(){
+//     try{
+//         const response = await fetch ("https://jsonplaceholder.typicode.com/users/1");
+
+//         if(!response.ok){
+//             throw new Error("Failed to fetch users error ")
+//         }
+
+//         const data = await response.json();
+//         console.log("Name:", data.name);
+//         console.log("Email:", data.email);
+//         console.log("Company Name:", data.company.name);
+//     }catch(error){
+//         console.log("Error: ",error)
+//     }
+// }
+// getInfo()
 
 
+// function getUser(){
+//     return fetch("https://jsonplaceholder.typicode.com/users/1")
+//             .then(response => {
+//                 if(!response.ok){
+//                     throw new Error("Failed to fetch user");
+//                 }
+
+//                 return response.json()
+//             });
+// }
+// getUser()
+//     .then(user =>{
+//         console.log("Name:",user.name)
+//     })
+//     .catch(error => {
+//         console.log("Error: ",error.message);
+//     })
 
 
+// async function getUser(){
+//     try{
+//         const response = await fetch( "https://jsonplaceholder.typicode.com/users");
+
+//         if(!response.ok){
+//             throw new Error(`HTTP error: ${response.status}`);
+//         }
+
+//         const users = await response.json();
+
+//         const filteredUser = users.filter(user => user.website.endsWith("org"));
+//         console.log(filteredUser);
+//     }catch(error){
+//         console.log("Error: ",error.message);
+//     }
+// }
+// getUser();
 
 
+// async function getProducts(){
+//     try{
+//         const response = await fetch( "https://fakestoreapi.com/products");
 
+//         if(!response.ok){
+//             throw new Error(`HTTP error: ${response.status}`);
+//         }
 
+//         const products = await response.json();
 
-
-
-
-
+//         products.forEach(product => {
+//             console.log("Title: ",product.title);
+//             console.log("Price: ",product.price);
+//             console.log("Category: ",product.category);
+//         })
+//     }catch(error){
+//         console.log("Error: ", error)
+//     }
+// }
+// getProducts();
 
 
 
