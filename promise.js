@@ -111,44 +111,58 @@
 //     .then(result => console.log(result));
 
 
-function redLight(){
-    return new Promise((resolve)=>{
-        console.log("Red");
-        setTimeout(()=>{
-            resolve();
-        },3000);
-    });
-}
+// function redLight(){
+//     return new Promise((resolve)=>{
+//         console.log("Red");
+//         setTimeout(()=>{
+//             resolve();
+//         },3000);
+//     });
+// }
 
-function yellowLight(){
-    return new Promise((resolve)=>{
-        console.log("Yellow");
-        setTimeout(()=>{
-            resolve();
-        },1000);
-    });
-}
+// function yellowLight(){
+//     return new Promise((resolve)=>{
+//         console.log("Yellow");
+//         setTimeout(()=>{
+//             resolve();
+//         },1000);
+//     });
+// }
 
-function greenLight(){
-    return new Promise((resolve)=>{
-        console.log("Green");
-        setTimeout(()=>{
-            resolve();
-        });
-    });
-}
+// function greenLight(){
+//     return new Promise((resolve)=>{
+//         console.log("Green");
+//         setTimeout(()=>{
+//             resolve();
+//         });
+//     });
+// }
 
-async function trafficLights(){
-    await redLight();
-    await yellowLight();
-    await greenLight();
+// async function trafficLights(){
+//     await redLight();
+//     await yellowLight();
+//     await greenLight();
 
-    await redLight();
-}
+//     await redLight();
+// }
 
-trafficLights();
+// trafficLights();
 
 
+// function divide(a,b){
+//     return new Promise((resolve,reject)=>{
+//         if(b!=0){
+//             resolve(a/b)
+//         }else{
+//            reject("Cannot divide by Zero")
+//         }
+//     })
+// }
+// divide(10,0)
+//   .then(resolve => {
+//     console.log(resolve)
+//     })
+//   .catch(reject => console.log(reject))
 
 
 
