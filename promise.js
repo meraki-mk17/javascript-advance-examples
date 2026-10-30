@@ -1,3 +1,4 @@
+// //1.
 // async function getData(){
 //     const url = "https://jsonplaceholder.typicode.com/users";
 //     try{
@@ -16,6 +17,7 @@
 // }
 // getData()
 
+// //2.
 // async function doSomethingRisky() {
 //   try {
 //     // 1. Put your risky code here (fetch, JSON parsing, etc.)
@@ -41,6 +43,7 @@
 // doSomethingRisky();
 
 
+// //3.
 // const myPromise = new Promise((resolve,reject)=>{
 //     let a = 10;
 //     let b = 20;
@@ -59,6 +62,8 @@
 //         console.log(error);
 //     })
 
+
+// //4.
 // const myPromise = new Promise((resolve,reject) => {
 //     setTimeout(()=>{
 //         resolve("Data loaded!");
@@ -74,6 +79,7 @@
 //     });
 
 
+// // 5.
 // Promise.resolve(5)
 //     .then(num => {
 //         return num*2
@@ -90,6 +96,8 @@
 //     .catch(reject => console.log(reject))
 //     .finally(() => console.log("Finished"));
 
+
+// //6.
 // const myPromise = new Promise((resolve,reject) => {
 //     resolve("Hello JavaScript!");
 //     reject("Something went wrong!")
@@ -103,6 +111,7 @@
 //     })
 
 
+// //7.
 // const addTwoPromises = async function(promise1, promise2) {
 //     return (await promise1) / (await promise2)
 // };
@@ -111,6 +120,7 @@
 //     .then(result => console.log(result));
 
 
+// //8.
 // function redLight(){
 //     return new Promise((resolve)=>{
 //         console.log("Red");
@@ -149,6 +159,7 @@
 // trafficLights();
 
 
+// //9.
 // function divide(a,b){
 //     return new Promise((resolve,reject)=>{
 //         if(b!=0){
@@ -164,15 +175,80 @@
 //     })
 //   .catch(reject => console.log(reject))
 
+// //10.
+// function squareRoot(num){
+//     return new Promise((resolve,reject)=>{
+//         if(num < 0){
+//             reject("Square root of a negative number is not possible")
+//         }else{
+//             resolve(Math.sqrt(num))
+//         }
+//     })
+// }
+// squareRoot(25)
+//     .then(resolve => console.log(resolve))
+//     .catch(reject => console.log(reject))
 
 
 
+// //11.
+// function login(username,password){
+//     return new Promise((resolve,reject)=>{
+//         if(username ==="Admin" && password ==="12345"){
+//             resolve("Login Successful")
+//         }else{
+//             reject("Invalid Username or Password")
+//         }
+//     });
+// }
+
+// login("Admin","12345")
+//    .then(resolve => console.log(resolve))
+//    .catch(reject => console.log(reject));
 
 
+// //12.
+// function createPassword(){
+//     return function (password){
+//         const hasLength = password.length > 8;
+//         const  hasUpperCase = /[A-Z]/.test(password);
+//         const hasNumber = /[0-9]/.test(password);
+
+//         if(!hasLength || !hasUpperCase || !hasNumber){
+//             throw new Error("Invalid Password")
+//         }
+//         return "Valid Password"
+//     }
+// }
+// const validPassword = createPassword();
+// try{
+//     console.log(validPassword("Hellowhois12"));
+//     console.log(validPassword("hello"))
+// }catch(error){
+//     console.log(error.message)
+// }
 
 
+// //13.
+// function withdraw(amount){
+//     const balance = 5000;
+//     return new Promise((resolve,reject)=>{
+//         if(amount > balance){
+//             reject("Insufficient Balance")
+//         }else if(amount <=0 ){
+//             reject("Invalid Withdrawal amount")
+//         }else{
+//             const remainingBalance = balance - amount;
+//             resolve(`Withdrawal Successful, Remaining Balance ${remainingBalance}`)
+//         }
+//     })
+// }
+// withdraw(6000)
+//    .then(resolve => console.log(resolve))
+//    .catch(reject => console.log(reject))
 
 
+// //14.
 
 
 
